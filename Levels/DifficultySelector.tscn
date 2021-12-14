@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/DifficultySelector.cs" type="Script" id=2]
+[ext_resource path="res://DifficultyTheme.tres" type="Theme" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -107.0
+margin_right = 323.0
+margin_bottom = 107.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Novice" type="Button" parent="HBoxContainer"]
+margin_right = 323.0
+margin_bottom = 68.0
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+text = "Novice"
+
+[node name="Pro" type="Button" parent="HBoxContainer"]
+margin_top = 72.0
+margin_right = 323.0
+margin_bottom = 141.0
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+text = "Pro"
+
+[node name="Killer" type="Button" parent="HBoxContainer"]
+margin_top = 145.0
+margin_right = 323.0
+margin_bottom = 214.0
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+text = "Killer"
+
+[node name="Answer" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 0.0703125
+anchor_right = 1.0
+anchor_bottom = 0.0703125
+margin_left = -553.0
+margin_top = -43.0
+margin_bottom = 43.0
+theme = ExtResource( 3 )
+text = "Answer :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 0.161
+anchor_right = 1.0
+anchor_bottom = 0.161
+margin_left = -553.0
+margin_top = -42.8171
+margin_bottom = 43.1829
+theme = ExtResource( 3 )
+text = "Level :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="State" type="Label" parent="."]
+anchor_left = 0.088
+anchor_top = 0.849
+anchor_right = 1.0
+anchor_bottom = 0.933
+margin_left = -5.8
+margin_top = -0.376038
+margin_bottom = -0.392029
+theme = ExtResource( 3 )
+text = "State :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="HBoxContainer/Novice" to="." method="_on_Novice_pressed"]
+[connection signal="pressed" from="HBoxContainer/Pro" to="." method="_on_Pro_pressed"]
+[connection signal="pressed" from="HBoxContainer/Killer" to="." method="_on_Killer_pressed"]
