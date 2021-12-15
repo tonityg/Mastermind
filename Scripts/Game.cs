@@ -6,6 +6,8 @@ public class Game : Control
     Label numbersEntry;
     Label tipsSymbols;
     Label hitRemain;
+    Label answer;
+    Label xpWon;
 
     [Signal] public delegate void victory(); 
     [Signal] public delegate void lose(); 
@@ -15,6 +17,12 @@ public class Game : Control
         numbersEntry = GetNode<Label>("NumEntry/Label");
         tipsSymbols = GetNode<Label>("Tips");
         hitRemain = GetNode<Label>("Remain");
+        answer = GetNode<Label>("Answer");
+
+        foreach (int number in GameManager.combinationGenerated)
+        {
+            answer.Text = answer.Text + number;
+        }
 
         hitRemain.Text = GameManager.hitLeft + " hits remaining";
     }

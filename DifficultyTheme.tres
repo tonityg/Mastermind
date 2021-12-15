@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=5 format=2]
+[gd_resource type="Theme" load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Fonts/BalooBhaijaan2-Regular.ttf" type="DynamicFontData" id=1]
 
@@ -11,11 +11,18 @@ bg_color = Color( 0.14902, 0.14902, 0.14902, 1 )
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+
 [sub_resource type="DynamicFont" id=1]
 size = 50
 font_data = ExtResource( 1 )
 
 [resource]
 Button/fonts/font = SubResource( 3 )
+Button/styles/hover = SubResource( 2 )
 Button/styles/normal = SubResource( 2 )
+Button/styles/pressed = SubResource( 4 )
 Label/fonts/font = SubResource( 1 )

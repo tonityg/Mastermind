@@ -11,12 +11,15 @@ config_version=4
 [application]
 
 config/name="Mastermind"
+config/description="Ce jeu est basé sur le projet de NSI \"Mastermind en Python\""
 run/main_scene="res://Levels/MainMenu.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://Assets/Img/AndroidIcon.png"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://Assets/Img/AndroidIcon.png"
 
 [autoload]
 
-GameManager="*res://Scripts/GameManager.cs"
+Init="*res://Scripts/Init.cs"
 
 [display]
 

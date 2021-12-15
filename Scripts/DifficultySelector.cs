@@ -11,20 +11,6 @@ public class DifficultySelector : Control
     [Export] int hitPro = 15;
     [Export] int hitKiller = 20;
 
-    Label answer;
-    Label state;
-
-    public override void _Ready()
-    {
-        answer = GetNode<Label>("Answer");
-        state = GetNode<Label>("State");
-
-        foreach (int number in GameManager.combinationGenerated)
-        {
-            answer.Text = answer.Text + number;
-        }
-    }
-
     void generateCombination(){
         int[] generateComputerCombination = new int[GameManager.maxValuesAccepted];
         RandomNumberGenerator random = new RandomNumberGenerator();

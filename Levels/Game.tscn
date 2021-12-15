@@ -1,24 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/GameStat.cs" type="Script" id=1]
 [ext_resource path="res://Scripts/Game.cs" type="Script" id=2]
 [ext_resource path="res://GameTheme.tres" type="Theme" id=3]
-[ext_resource path="res://Assets/Fonts/BalooBhaijaan2-Regular.ttf" type="DynamicFontData" id=4]
 
-[sub_resource type="DynamicFont" id=2]
-size = 50
-font_data = ExtResource( 4 )
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.2, 0.2, 0.2, 1 )
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-
-[sub_resource type="Theme" id=4]
-Button/fonts/font = SubResource( 2 )
-Button/styles/normal = SubResource( 3 )
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.14902, 0.14902, 0.14902, 1 )
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0, 0, 0, 0.654902 )
@@ -56,6 +43,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Answer" type="Label" parent="."]
+anchor_left = 0.557
+anchor_right = 1.0
+anchor_bottom = 0.101
+margin_left = -0.200012
+margin_bottom = -0.424004
+theme = ExtResource( 3 )
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Remain" type="Label" parent="."]
 anchor_right = 0.443
 anchor_bottom = 0.101
@@ -74,6 +74,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -0.288025
 theme = ExtResource( 3 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -92,16 +93,20 @@ margin_bottom = 86.0
 [node name="Delete" type="Button" parent="Keyboard/Nums/HBoxContainer"]
 margin_right = 298.0
 margin_bottom = 86.0
+focus_mode = 0
 size_flags_horizontal = 3
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "<"
 
 [node name="Confirm" type="Button" parent="Keyboard/Nums/HBoxContainer"]
 margin_left = 302.0
 margin_right = 600.0
 margin_bottom = 86.0
+focus_mode = 0
 size_flags_horizontal = 3
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "Confirm"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -119,24 +124,30 @@ __meta__ = {
 [node name="1" type="Button" parent="Keyboard/Nums/Top"]
 margin_right = 197.0
 margin_bottom = 134.0
+focus_mode = 0
 size_flags_horizontal = 3
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "1"
 
 [node name="2" type="Button" parent="Keyboard/Nums/Top"]
 margin_left = 201.0
 margin_right = 398.0
 margin_bottom = 134.0
+focus_mode = 0
 size_flags_horizontal = 3
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "2"
 
 [node name="3" type="Button" parent="Keyboard/Nums/Top"]
 margin_left = 402.0
 margin_right = 600.0
 margin_bottom = 134.0
+focus_mode = 0
 size_flags_horizontal = 3
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "3"
 
 [node name="Mid" type="HBoxContainer" parent="Keyboard/Nums"]
@@ -151,24 +162,30 @@ __meta__ = {
 [node name="4" type="Button" parent="Keyboard/Nums/Mid"]
 margin_right = 197.0
 margin_bottom = 134.0
+focus_mode = 0
 size_flags_horizontal = 3
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "4"
 
 [node name="5" type="Button" parent="Keyboard/Nums/Mid"]
 margin_left = 201.0
 margin_right = 398.0
 margin_bottom = 134.0
+focus_mode = 0
 size_flags_horizontal = 3
-theme = SubResource( 4 )
+theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "5"
 
 [node name="6" type="Button" parent="Keyboard/Nums/Mid"]
 margin_left = 402.0
 margin_right = 600.0
 margin_bottom = 134.0
+focus_mode = 0
 size_flags_horizontal = 3
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "6"
 
 [node name="Bot" type="HBoxContainer" parent="Keyboard/Nums"]
@@ -183,16 +200,20 @@ __meta__ = {
 [node name="7" type="Button" parent="Keyboard/Nums/Bot"]
 margin_right = 298.0
 margin_bottom = 134.0
+focus_mode = 0
 size_flags_horizontal = 3
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "7"
 
 [node name="8" type="Button" parent="Keyboard/Nums/Bot"]
 margin_left = 302.0
 margin_right = 600.0
 margin_bottom = 134.0
+focus_mode = 0
 size_flags_horizontal = 3
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "8"
 
 [node name="NumEntry" type="Panel" parent="."]
@@ -228,12 +249,14 @@ __meta__ = {
 }
 
 [node name="State" type="Label" parent="GameStat"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -227.0
-margin_top = 27.0
-margin_right = 227.0
-margin_bottom = 130.0
+anchor_left = 0.122
+anchor_top = 0.026
+anchor_right = 0.878
+anchor_bottom = 0.127
+margin_left = -0.200005
+margin_top = 0.375999
+margin_right = 0.200012
+margin_bottom = -0.0480042
 theme = ExtResource( 3 )
 text = "STATE"
 align = 1
@@ -243,14 +266,33 @@ __meta__ = {
 }
 
 [node name="Hits" type="Label" parent="GameStat"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -227.0
-margin_top = 113.0
-margin_right = 227.0
-margin_bottom = 216.0
+anchor_left = 0.122
+anchor_top = 0.11
+anchor_right = 0.878
+anchor_bottom = 0.211
+margin_left = -0.200005
+margin_top = 0.359993
+margin_right = 0.200012
+margin_bottom = -0.0640106
 theme = ExtResource( 3 )
 text = "HITS USED"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="XPWon" type="Label" parent="GameStat"]
+anchor_left = 0.122
+anchor_top = 0.206
+anchor_right = 0.878
+anchor_bottom = 0.307
+margin_left = -0.200005
+margin_top = 0.0559845
+margin_right = 0.200012
+margin_bottom = -0.368011
+theme = ExtResource( 3 )
+text = "XP WON"
 align = 1
 valign = 1
 __meta__ = {
